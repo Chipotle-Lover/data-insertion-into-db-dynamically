@@ -36,6 +36,6 @@ else "persons_default"]]></ee:set-variable>
 			<db:sql ><![CDATA[#["insert into $(vars.tableName) values($(vars.values))"]
  ]]></db:sql>
 		</db:insert>
-		<logger level="INFO" doc:name="Output" doc:id="be187b77-90ca-412f-b388-198c62dcf454" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload]"/>
+		<logger level="INFO" doc:name="Output payload" doc:id="be187b77-90ca-412f-b388-198c62dcf454" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload]"/>
 	</flow>
 </mule>
