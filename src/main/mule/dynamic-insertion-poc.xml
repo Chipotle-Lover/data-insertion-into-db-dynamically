@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<db:config name="Database_Config" doc:name="Database Config" doc:id="a1467cb7-4d3c-4134-8988-11e4dda6950b" >
-		<db:my-sql-connection host="localhost" port="3306" user="root" password="Habtamu3442$" database="watermark" />
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="*****" database="watermark" />
 	</db:config>
 	<flow name="dynamic-insertion-pocFlow" doc:id="0c4ffefd-7224-4055-acaf-75406673a620" >
 		<http:listener doc:name="Listener" doc:id="ab19ef0a-6555-420a-97c0-814e5ba5675e" config-ref="HTTP_Listener_config" path="/insert"/>
