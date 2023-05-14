@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</db:config>
 	<flow name="dynamic-insertion-pocFlow" doc:id="0c4ffefd-7224-4055-acaf-75406673a620" >
 		<http:listener doc:name="Listener" doc:id="ab19ef0a-6555-420a-97c0-814e5ba5675e" config-ref="HTTP_Listener_config" path="/insert"/>
-		<logger level="INFO" doc:name="Logger" doc:id="a4dd68f1-f440-4ca4-8e45-b37168b58f26" message="#[payload]"/>
+		<logger level="INFO" doc:name="Incoming payload" doc:id="a4dd68f1-f440-4ca4-8e45-b37168b58f26" message="#[payload]"/>
 		<ee:transform doc:name="Transform Message" doc:id="9bfb8b26-1e5d-4adb-8d20-518564bc6382">
 			<ee:message>
 			</ee:message>
@@ -36,6 +36,6 @@ else "persons_default"]]></ee:set-variable>
 			<db:sql ><![CDATA[#["insert into $(vars.tableName) values($(vars.values))"]
  ]]></db:sql>
 		</db:insert>
-		<logger level="INFO" doc:name="Logger" doc:id="be187b77-90ca-412f-b388-198c62dcf454" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload]"/>
+		<logger level="INFO" doc:name="Output" doc:id="be187b77-90ca-412f-b388-198c62dcf454" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload]"/>
 	</flow>
 </mule>
