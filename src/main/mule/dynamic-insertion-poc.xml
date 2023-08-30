@@ -37,5 +37,6 @@ else "persons_default"]]></ee:set-variable>
  ]]></db:sql>
 		</db:insert>
 		<logger level="INFO" doc:name="Output payload" doc:id="be187b77-90ca-412f-b388-198c62dcf454" message="#[%dw 2.0&#10;output application/json&#10;---&#10;payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="1737f998-f096-45f9-b830-3b8607f13e8e" />
 	</flow>
 </mule>
